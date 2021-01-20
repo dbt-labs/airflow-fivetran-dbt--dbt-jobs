@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: pokemon
+    database: raw
+    schema: airflow_pokemon_demo
+    tables:
+      - name: pokedex
+        columns:
+          - name: _row
+            description: row number of the data item
+            tests:
+              - unique:
+                  severity: warn
+              - not_null:
+                  severity: warn
+            name: nat
+            description: natural key of the table
+            tests:
+              - unique:
+                  severity: warn
+              - not_null:
+                  severity: warn
+            name: hatch
+            description: hatch number 
+            name: catch
+            description: catch number
+            name: hp
+            description: power level 
+            # other columns that could be added maybe below
+            # SPE	GENDER	EXPV	EGG_GROUP_I	EGG_GROUP_II	POKEMON	EV_WORTH	HOE	JOH	DEF	SP_A	TIER	LK_GK	SP_D	COLOR	EVOLVE	ABILITY_II	MASS	TOTAL	TYPE_I	TYPE_II	ABILITY_I	ATK	SIN	UN	PER	EXP	HIDDEN_ABILITY	_FIVETRAN_SYNCED
+            

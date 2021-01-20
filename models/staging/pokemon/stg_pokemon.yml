@@ -1,0 +1,10 @@
+
+version: 2
+
+models:
+  - name: stg_pokedex
+    columns:
+      - name: pokemon_id
+        tests:
+          - unique
+          - not_null
