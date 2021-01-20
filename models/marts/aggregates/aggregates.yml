@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: agg_pokedex_summary
+    columns:
+      - name: catch_number
+        tests:
+          - unique
+          - not_null
